@@ -73,21 +73,21 @@ def response(user_response):
 
 if __name__ == "__main__":
     flag = True
-    print("Hello, there my name is Aneka. I will answer your queries. If you want to exit, type Bye!")
+    print("Hello, there my name is Synapse. I will answer your queries. If you want to exit, type Bye!")
     while(flag==True):
         user_response = input()
         user_response = user_response.lower()
         if(user_response!='bye'):
             if user_response == 'thanks' or user_response == 'thank you':
                 flag = False
-                print("Aneka: You're welcome!")
+                print("Synapse: You're welcome!")
             else:
                 if(greeting(user_response)!=None):
-                    print("Aneka:" +greeting(user_response))
+                    print("Synapse:" +greeting(user_response))
                 else:
-                    print("Aneka:", end='')
+                    print("Synapse:", end='')
                     print(response(user_response))
                     sent_tokens.remove(user_response)
         else:
             flag = False
-            print("Aneka: Bye! Have a great time!" )
+            print("Synapse: Bye! Have a great time!" )
